@@ -1,0 +1,39 @@
+вывод графики:
+
+let y=16
+let adr=49152
+go sub 9010
+for f= 1 to y*2 step 2
+poke 23675,a(f): poke 23676,a(f+1)
+print "   ABCDEFGHIJKLMN"
+next f
+
+вывод волчка spin1:
+
+5 let adr=50945: go sub 9020
+10 PRINT "   \a\b"
+20 PRINT "   \c\d"
+30 PRINT "   \e\f"
+40 PRINT "  \g\h\i"
+50 PRINT "\j\k\l\m\n"
+60 PRINT " \o\p\q\r\s"
+70 PRINT "  \t\u"
+
+вывод волчка spin2:
+
+5 let adr=51115: go sub 9020
+10 PRINT " \a\b"
+20 PRINT " \c\d"
+30 PRINT " \e\f"
+40 PRINT " \g\h\i"
+50 PRINT " \j\k\l\m\n"
+60 PRINT "\o\p\q\r\s"
+70 PRINT "  \t\u"
+
+подпрограммы:
+
+9000 DEF FN h(n)=INT (n/256)
+9001 DEF FN l(n)=n-(FN h(n)*256)
+9010 FOR f=1 TO y*2 STEP 2: LET a(f)=FN l(adr): LET a(f+1)=FN h(adr): LET adr=adr+(x*8): NEXT f: RETURN
+9020 POKE 23675,FN l(adr): POKE 23676,FN h(adr): RETURN
+
