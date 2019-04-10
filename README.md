@@ -1,4 +1,4 @@
-Source files of "White stars" — zx basic demo, contribution to BASE-X 2015 virtual compo.
+Source files of «White stars» — zx basic demo, contribution to BASE-X 2015 virtual compo.
 
 pt3 player included, done by introspec
 music included
